@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>새 향수 발견 · 오늘의 향수</title>
+  <link rel="stylesheet" href="./style.css?v=21">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icon-180.png">
+  <meta name="apple-mobile-web-app-title" content="Wood의 향">
+</head>
+<body class="discovery-page">
+  <main class="app-shell">
+    <header class="masthead"><span class="wordmark">SCENT / EDIT</span><span>개인 향수 서재</span></header>
+    <nav class="page-nav" aria-label="페이지 선택"><a href="./index.html">내 향수 추천</a><a href="./discover.html" aria-current="page">새 향수 발견</a></nav>
+    <section class="hero">
+      <p class="eyebrow">BEYOND THE FAMILIAR</p>
+      <h1>새로운 향의 발견.</h1>
+      <p class="sub">보유하지 않은 향수 5개를 만나보세요. 국내 공식 판매 목록이 확인된 제품을 우선 제안해요.</p>
+    </section>
+    <section class="card">
+      <label class="label" for="scentPreference">어떤 분위기를 찾으세요?</label>
+      <select id="scentPreference">
+        <option value="all">모든 향 둘러보기</option>
+        <option value="green">초록빛 · 우디</option>
+        <option value="soft">부드러운 · 플로럴</option>
+        <option value="fresh">산뜻한 · 시트러스 / 해양</option>
+        <option value="warm">따뜻한 · 앰버 / 구르망</option>
+        <option value="unknown">향 분위기 확인 전</option>
+      </select>
+      <label class="label" for="accordPreference">주요 어코드</label>
+      <select id="accordPreference"><option value="all">모든 어코드</option><option value="unknown">어코드 확인 전</option></select>
+      <label class="label" for="catalogSource">상품 목록</label>
+      <select id="catalogSource">
+        <option value="all">전체 향수</option>
+        <option value="arokor">아로코 추가 향수</option>
+      </select>
+      <button id="refreshDiscovery" class="primary-btn" type="button" style="margin-top: 16px">새로고침 · 다른 향수 5개</button>
+      <p class="status">GPS 없이 사용할 수 있어요. 국내 판매 확인 제품을 먼저 뽑고 브랜드별 후보를 섞어 제안하며, 새로고침하면 직전 5개는 제외해요. 향 분위기 분류는 앱의 편집 기준이며, 실시간 인기 순위는 아닙니다.</p>
+    </section>
+    <p id="discoveryCount" class="status" role="status" aria-live="polite"></p>
+    <section id="discoveryResults" aria-label="새 향수 추천 목록"></section>
+    <footer class="editorial-footer"><span>YOUR PERSONAL SELECTION</span><span>SCENT / EDIT</span></footer>
+  </main>
+  <script src="./collection.js?v=21"></script>
+  <script src="./discovery-details.js?v=21"></script>
+  <script src="./arokor-catalog.js?v=23"></script>
+  <script src="./discover.js?v=23"></script>
+</body>
+</html>
